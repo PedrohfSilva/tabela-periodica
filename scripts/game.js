@@ -36,7 +36,7 @@ for(element of elementsHTML) {
                 // gera um novo elemento aleatóriamente diferente do último
                 do {
                     elementNumberRandom = numberRandom();
-                } while(elementsProperties[elementNumberRandom].name == elementNameRandom);
+                } while(elementsProperties[elementNumberRandom].name === elementNameRandom.value);
                 elementNameRandom.value = elementsProperties[elementNumberRandom].name;
             }
             else {
@@ -85,7 +85,7 @@ start.addEventListener("click", () => {
                 // gera um novo elemento aleatóriamente diferente do último
                 do {
                     elementNumberRandom = numberRandom();
-                } while(elementsProperties[elementNumberRandom].name == elementNameRandom);
+                } while(elementsProperties[elementNumberRandom].name === elementNameRandom.value);
                 elementNameRandom.value = elementsProperties[elementNumberRandom].name;
 
                 skipElement.disabled = false; // habilita o botão pular
