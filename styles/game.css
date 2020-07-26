@@ -1,0 +1,154 @@
+@charset "UTF-8";
+
+/* Campo para jogar o jogo */
+div#tabela_periodica div#play_game {
+    grid-column: 3 / 13;
+    grid-row: 1 / 4;
+    background-color: #CCC;
+    border-radius: 4px;
+    margin: 2px 30px 24px;
+    padding: 6px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Input do nome do elemento gerado aleatóriamente */
+div#play_game input#element_name_random {
+    width: 67%;
+    height: 35%;
+    margin-right: 3%;
+    background-color: #EEE;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+    font: bold 24px Arial;
+    color: #222;
+}
+
+/* Botão para pular o elemento gerado */
+div#play_game button#skip_element {
+    width: 23%;
+    height: 35%;
+    background-color: rgb(241, 164, 76);
+    border: none;
+    border-radius: 4px;
+    font: bold 24px Arial;
+    color: #222;
+    cursor: pointer;
+    transition: background-color 100ms;
+}
+div#play_game button#skip_element:hover {
+    background-color: rgb(241, 172, 92);
+}
+
+/* Input dos pontos no jogo */
+div#play_game input#score {
+    width: 17.8%;
+    height: 35%;
+    background-color: #AAA;
+    border: none;
+    border-radius: 4px;
+    font: bold 24px Arial;
+    color: #222;
+    margin-right: 3%;
+    text-align: center;
+}
+
+/* Input do tempo de jogo restante */
+div#play_game input#time {
+    width: 34.6%;
+    height: 35%;
+    background-color: #AAA;
+    border: none;
+    border-radius: 4px;
+    font: bold 24px Arial;
+    color: #222;
+    margin-right: 3%;
+    text-align: center;
+}
+
+/* Botões para iniciar e reiniciar o jogo */
+div#play_game button#start,
+div#play_game button#restart {
+    width: 34.6%;
+    height: 35%;
+    background-color: rgb(76, 189, 129);
+    border: none;
+    border-radius: 4px;
+    font: bold 24px Arial;
+    color: #222;
+    cursor: pointer;
+    transition: background-color 100ms;
+}
+div#play_game button#restart {
+    background-color: rgb(46, 137, 173);
+}
+div#play_game button#start:hover {
+    background-color: rgb(98, 197, 144);
+}
+div#play_game button#restart:hover {
+    background-color: rgb(71, 145, 175);
+}
+
+/* Classe para esconder os botões iniciar e reiniciar */
+div#play_game button.hide {
+    display: none;
+}
+
+/* Classe para mostrar o elemento gerado, quando o botão pular é clicado */
+div#tabela_periodica div.showElement {
+    animation: showElement 2s;
+    pointer-events: none;
+}
+@keyframes showElement{
+    30% {
+        border: none;
+        z-index: 100;
+        box-shadow: inset 0 0 0 100px #0006, inset 0 0 0 2px #0007, 0.8px 0.8px 1px 1.2px #0008;
+    }
+    70% {
+        border: none;
+        z-index: 100;
+        box-shadow: inset 0 0 0 100px #0006, inset 0 0 0 2px #0007, 0.8px 0.8px 1px 1.2px #0008;
+    }
+    to {
+        border: 2.4px solid #EEE;
+        z-index: 0;
+    }
+}
+
+/* Classe para indicar que o elemento clicado está correto */
+div#tabela_periodica div.correct {
+    animation: correct 600ms;
+    pointer-events: none;
+}
+@keyframes correct {
+    50% {
+        border: none;
+        z-index: 100;
+        box-shadow: inset 0 0 0 100px #0f48, inset 0 0 0 2px #01621bdd, 0.8px 0.8px 1px 1.2px #0008;
+    }
+    to {
+        border: 2.4px solid #EEE;
+        z-index: 0;
+    }
+}
+
+/* Classe para indicar que o elemento clicado está incorreto */
+div#tabela_periodica div.incorrect {
+    animation: incorrect 600ms;
+    pointer-events: none;
+}
+@keyframes incorrect {
+    50% {
+        border: none;
+        z-index: 100;
+        box-shadow: inset 0 0 0 100px #f008, inset 0 0 0 2px #f00d, 0.8px 0.8px 1px 1.2px #0008;
+    }
+    to {
+        border: 2.4px solid #EEE;
+        z-index: 0;
+    }
+}

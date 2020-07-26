@@ -1,0 +1,140 @@
+@charset "UTF-8";
+
+/* Reset para todos os elementos do HTML */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elemento principal */
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Tabela periódica */
+main div#tabela_periodica {
+    width: 1080px;
+    height: 570px;
+    background-color: #EEE;
+    padding: 20px;
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(7, 1fr) 0.5fr 1fr 1fr;
+}
+
+/* Inputs que mostram informamações dos elementos ao passar o mouse por cima */
+div#tabela_periodica input.element_over {
+    width: 100%;
+    box-shadow: inset 0 0 0 1.6px #BBB;
+    background-color: #FFF;
+    border: 2px solid #EEE;
+    border-radius: 6px;
+    text-align: center;
+    font: normal 22px Arial;
+    outline: none;
+}
+div#tabela_periodica input.element_over::placeholder {
+    font-size: 18px;
+}
+
+/* Input que mostra o nome do elemento */
+div#tabela_periodica input#element_name_over {
+    grid-column: 13 / 18;
+    grid-row: 1 / 2; 
+}
+
+/* Input que mostra o símbolo do elemento */
+div#tabela_periodica input#element_symbol_over {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+div#tabela_periodica input#element_symbol_over::placeholder {
+    font-size: 12px;
+}
+
+/* Inputs do nome e do símbolo dos elementos ao estarem focados */
+div#tabela_periodica input#element_name_over:focus,
+div#tabela_periodica input#element_symbol_over:focus {
+    box-shadow: inset 0 0 0 1.2px #000;
+}
+
+/* Input que mostra a massa do elemento */
+div#tabela_periodica input#element_mass_over {
+    grid-column: 1 / 4;
+    grid-row: 9 / 10;
+    outline: none;
+    cursor: default;
+}
+
+/* Input que mostra o grupo do elemento */
+div#tabela_periodica input#element_group_over {
+    grid-column: 1 / 4;
+    grid-row: 10 / 11;
+    font-size: 15px;
+    outline: none;
+    cursor: default;
+}
+
+/* Todos os elementos químicos da tabela periódica */
+div#tabela_periodica div.element {
+    border-radius: 10%;
+    border: 2.4px solid #EEE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    position: relative;
+    cursor: pointer;
+}
+
+/* Símbolo do elemento */
+div.element div.symbol {
+    font: bold 22px Arial;
+    color: #222;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Número do elemento */
+div.element div.number {
+    font: normal 14px Arial;
+    color: #000;
+    user-select: none;
+    pointer-events: none
+}
+
+/* Elemento químico ao passar o mouse por cima */
+div#tabela_periodica div.over {
+    box-shadow: inset 0 0 0 100px #0001, inset 0 0 0 2px #0004;
+}
+
+/* Elemento químico pesquisado */
+div#tabela_periodica div.searchedElement {
+    border: none;
+    z-index: 100;
+    box-shadow: inset 0 0 0 100px #0daa, inset 0 0 0 2px #044d, 0.8px 0.8px 1px 1.2px #0008;
+    transition: 0.2s;
+}
+
+/* Divs indicando que há mais elementos (lantanídeos e actinídios) naquele espaço */
+div#tabela_periodica div#more_lantanideos,
+div#tabela_periodica div#more_actinidios {
+    grid-area: 6 / 3;
+    background-color: #CCC;
+    border: 2.4px solid #EEE;
+    font: bold 12px Arial;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25% 0;
+}
+div#tabela_periodica div#more_actinidios {
+    grid-area: 7 / 3;
+}

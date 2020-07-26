@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tabela Periódica</title>
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/game.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <main>
+            <div id="tabela_periodica">
+                <div id="play_game">
+                    <input type="text" id="element_name_random" disabled>
+                    <button id="skip_element" disabled>Pular</button>
+                    <input type="text" id="score" disabled value="0">
+                    <input type="text" id="time" disabled value="1:00">
+                    <button id="start">Iniciar</button>
+                    <button id="restart" class="hide">Reiniciar</button>
+                </div>
+
+                <input type="text" id="element_name_over" class="element_over" placeholder="Nome do elemento">
+                <input type="text" id="element_symbol_over" class="element_over" placeholder="Símbolo">
+                <input type="text" id="element_mass_over" class="element_over" placeholder="Massa atômica" readonly>
+                <input type="text" id="element_group_over" class="element_over" placeholder="Grupo do elemento" readonly>
+
+                <div id="more_lantanideos">57 - 71</div>
+                <div id="more_actinidios">89 - 103</div>
+            </div>
+        </main>
+
+        <script src="scripts/elements_data.js"></script>
+        <script src="scripts/script.js"></script>
+        <script src="scripts/game.js"></script>
+    </body>
+</html>
