@@ -9,12 +9,8 @@
 
 /* Elemento principal */
 main {
-    width: 100vw;
     height: 100vh;
     background-color: #FFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 /* Tabela periódica */
@@ -22,6 +18,7 @@ main div#tabela_periodica {
     width: 1080px;
     height: 570px;
     background-color: #EEE;
+    margin: 120px auto 0;
     padding: 20px;
     border-radius: 4px;
     display: grid;
@@ -92,6 +89,8 @@ div#tabela_periodica div.element {
     flex-direction: column-reverse;
     position: relative;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Símbolo do elemento */
