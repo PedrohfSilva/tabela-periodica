@@ -9,8 +9,10 @@
 
 /* Elemento principal */
 main {
-    height: 100vh;
+    width: 100vw;
+    height: 100%;
     background-color: #FFF;
+    overflow: auto;
 }
 
 /* Tabela periódica */
@@ -21,6 +23,7 @@ main div#tabela_periodica {
     margin: 120px auto 0;
     padding: 20px;
     border-radius: 4px;
+    box-shadow: 0 0 6px #0006;
     display: grid;
     grid-template-columns: repeat(18, 1fr);
     grid-template-rows: repeat(7, 1fr) 0.5fr 1fr 1fr;
