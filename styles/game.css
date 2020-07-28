@@ -6,35 +6,38 @@ div#tabela_periodica div#play_game {
     grid-row: 1 / 4;
     background-color: #CCC;
     border-radius: 4px;
-    margin: 2px 30px 24px;
+    margin: 2px 36px 30px;
     padding: 6px 0;
+    box-shadow: 0 0 2px #000A;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
+div#play_game input,
+div#play_game button {
+    font: bold 24px Arial;
+}
 
 /* Input do nome do elemento gerado aleatóriamente */
 div#play_game input#element_name_random {
     width: 67%;
-    height: 35%;
+    height: 36%;
     margin-right: 3%;
     background-color: #EEE;
-    border: none;
+    border: 1.2px solid #BBB;
     border-radius: 4px;
     text-align: center;
-    font: bold 24px Arial;
     color: #222;
 }
 
 /* Botão para pular o elemento gerado */
 div#play_game button#skip_element {
     width: 23%;
-    height: 35%;
+    height: 36%;
     background-color: rgb(241, 164, 76);
     border: none;
     border-radius: 4px;
-    font: bold 24px Arial;
     color: #222;
     cursor: pointer;
     transition: background-color 100ms;
@@ -46,11 +49,10 @@ div#play_game button#skip_element:hover {
 /* Input dos pontos no jogo */
 div#play_game input#score {
     width: 17.8%;
-    height: 35%;
+    height: 36%;
     background-color: #AAA;
     border: none;
     border-radius: 4px;
-    font: bold 24px Arial;
     color: #222;
     margin-right: 3%;
     text-align: center;
@@ -59,11 +61,10 @@ div#play_game input#score {
 /* Input do tempo de jogo restante */
 div#play_game input#time {
     width: 34.6%;
-    height: 35%;
+    height: 36%;
     background-color: #AAA;
     border: none;
     border-radius: 4px;
-    font: bold 24px Arial;
     color: #222;
     margin-right: 3%;
     text-align: center;
@@ -73,11 +74,10 @@ div#play_game input#time {
 div#play_game button#start,
 div#play_game button#restart {
     width: 34.6%;
-    height: 35%;
+    height: 36%;
     background-color: rgb(76, 189, 129);
     border: none;
     border-radius: 4px;
-    font: bold 24px Arial;
     color: #222;
     cursor: pointer;
     transition: background-color 100ms;
