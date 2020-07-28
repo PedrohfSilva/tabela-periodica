@@ -3,13 +3,13 @@ const elementsProperties = [];
 
 // Arrays com as informações e propriedades dos elementos
 const elementsName = [
-    "Hidrogênio", "Hélio", "Lítio", "Berílio", "Boro", "Carbono", "Nitrogênio", "Oxigênio", "Flúor", "Neônio", "Sódio", "Magnésio", "Alumínio", "Silício", "Fósforo", "Enxofre", "Cloro", "Argônio", "Potássio", "Cálcio", "Escândio", "Titânio", "Vanádio", "Cromo", "Manganês", "Ferro", "Cobalto", "Níquel", "Cobre", "Zinco", "Gálio", "Germânio", "Arsênio", "Selênio", "Bromo", "Criptônio", "Rubídio", "Estrôncio", "Ítrio", "Zircônio", "Nióbio", "Molibdênio", "Tecnécio", "Rutênio", "Ródio", "Paládio", "Prata", "Cádmio", "Índio", "Estanho", "Antimônio", "Telúrio", "Iodo", "Xenônio", "Césio", "Bário", "Lantânio", "Cério", "Praseodímio", "Neodímio", "Promécio", "Samário", "Európio", "Gadolínio", "Térbio", "Disprósio", "Hólmio", "Érbio", "Túlio", "Itérbio", "Lutécio", "Háfnio", "Tântalo", "Tungstênio", "Rênio", "Ósmio", "Irídio", "Platina", "Ouro", "Mercúrio", "Tálio", "Chumbo", "Bismuto", "Polônio", "Ástato", "Randônio", "Frâncio", "Rádio", "Actínio", "Tório", "Protactínio", "Urânio", "Netúnio", "Plutônio", "Amerício", "Cúrio", "Berquélio", "Califórnio", "Einstênio", "Férmio", "Mendelévio", "Nobélio", "Laurêncio", "Rutherfórdio", "Dúbnio", "Seabórgio", "Bóhrio", "Hássio", "Meitnério", "Darmstádio", "Roentgênio", "Copernício", "Nihônio", "Fleróvio", "Moscóvio", "Livermório", "Tenessino", "Oganessônio"
+    "Hidrogênio", "Hélio", "Lítio", "Berílio", "Boro", "Carbono", "Nitrogênio", "Oxigênio", "Flúor", "Neônio", "Sódio", "Magnésio", "Alumínio", "Silício", "Fósforo", "Enxofre", "Cloro", "Argônio", "Potássio", "Cálcio", "Escândio", "Titânio", "Vanádio", "Crômio", "Manganês", "Ferro", "Cobalto", "Níquel", "Cobre", "Zinco", "Gálio", "Germânio", "Arsênio", "Selênio", "Bromo", "Criptônio", "Rubídio", "Estrôncio", "Ítrio", "Zircônio", "Nióbio", "Molibdênio", "Tecnécio", "Rutênio", "Ródio", "Paládio", "Prata", "Cádmio", "Índio", "Estanho", "Antimônio", "Telúrio", "Iodo", "Xenônio", "Césio", "Bário", "Lantânio", "Cério", "Praseodímio", "Neodímio", "Promécio", "Samário", "Európio", "Gadolínio", "Térbio", "Disprósio", "Hólmio", "Érbio", "Túlio", "Itérbio", "Lutécio", "Háfnio", "Tântalo", "Tungstênio", "Rênio", "Ósmio", "Irídio", "Platina", "Ouro", "Mercúrio", "Tálio", "Chumbo", "Bismuto", "Polônio", "Ástato", "Radônio", "Frâncio", "Rádio", "Actínio", "Tório", "Protactínio", "Urânio", "Netúnio", "Plutônio", "Amerício", "Cúrio", "Berquélio", "Califórnio", "Einstênio", "Férmio", "Mendelévio", "Nobélio", "Laurêncio", "Rutherfórdio", "Dúbnio", "Seabórgio", "Bóhrio", "Hássio", "Meitnério", "Darmstádtio", "Roentgênio", "Copernício", "Nihônio", "Fleróvio", "Moscóvio", "Livermório", "Tennesso", "Oganessônio"
 ];
 const elementsSymbol = [
     "H", "He", "Li", "Be", "B", "C", "N", "O", "F", "Ne", "Na", "Mg", "Al", "Si", "P", "S", "Cl", "Ar", "K", "Ca", "Sc", "Ti", "V", "Cr", "Mn", "Fe", "Co", "Ni", "Cu", "Zn", "Ga", "Ge", "As", "Se", "Br", "Kr", "Rb", "Sr", "Y", "Zr", "Nb", "Mo", "Tc", "Ru", "Rh", "Pd", "Ag", "Cd", "In", "Sn", "Sb", "Te", "I", "Xe", "Cs", "Ba", "La", "Ce", "Pr", "Nd", "Pm", "Sm", "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu", "Hf", "Ta", "W", "Re", "Os", "Ir", "Pt", "Au", "Hg", "Tl", "Pb", "Bi", "Po", "At", "Rn", "Fr", "Ra", "Ac", "Th", "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md", "No", "Lr", "Rf", "Db", "Sg", "Bh", "Hs", "Mt", "Ds", "Rg", "Cn", "Nh", "Fl", "Mc", "Lv", "Ts", "Og" 
 ];
 const elementsMass = [
-    1.008, 4.003, 6.941, 9.012, 10.811, 12.011, 14.007, 15.999, 18.998, 20.18, 22.99, 24.305, 26.982, 28.086, 30.974, 32.065, 35.453, 39.948, 39.098, 40.078, 44.956, 47.867, 50.942, 51.996, 54.938, 55.845, 58.933, 58.693, 63.546, 65.409, 69.723, 72.64, 74.922, 78.96, 79.904, 83.798, 85.468, 87.62, 88.906, 91.224, 92.906, 95.94, 98, 101.07, 102.905, 106.42, 107.868, 112.411, 114.818, 118.71, 121.76, 128.60, 126.904, 131.293, 132.905, 137.327, 138.905, 140.116, 140.908, 144.242, 145, 150.36, 151.964, 157.25, 158.925, 162.50, 164.930, 167.259, 168.934, 173.04, 174.967, 178.49, 180.948, 183.84, 186.207, 190.23, 192.217, 195.084, 196.967, 200.59, 204.383, 207.20, 208.98, 210, 210, 220, 223, 226, 227, 232.03806, 231.03588, 238.02891, 237, 244, 243, 247, 247, 251, 252, 257, 258, 259, 262, 261.00001, 262, 266, 264, 277, 268, 271, 272, 277, 286, 289, 288, 293, 294, 294
+    1.008, 4.003, 6.941, 9.012, 10.811, 12.011, 14.007, 15.999, 18.998, 20.18, 22.99, 24.305, 26.982, 28.085, 30.974, 32.065, 35.453, 39.948, 39.098, 40.078, 44.956, 47.867, 50.942, 51.996, 54.938, 55.845, 58.933, 58.693, 63.546, 65.409, 69.723, 72.64, 74.922, 78.96, 79.904, 83.798, 85.468, 87.62, 88.906, 91.224, 92.906, 95.94, 98, 101.07, 102.905, 106.42, 107.868, 112.411, 114.818, 118.71, 121.76, 127.60, 126.904, 131.293, 132.905, 137.327, 138.905, 140.116, 140.908, 144.242, 145, 150.36, 151.964, 157.25, 158.925, 162.50, 164.930, 167.259, 168.934, 173.04, 174.967, 178.49, 180.948, 183.84, 186.207, 190.23, 192.217, 195.084, 196.967, 200.59, 204.383, 207.2, 208.98, 209, 210, 222, 223, 226, 227, 232.03806, 231.03588, 238.02891, 237.0482, 244, 243, 247, 247, 251, 252, 257, 258, 259, 266, 267, 268, 269, 270, 277, 278, 281, 282, 285, 286, 289, 290, 293, 294, 294
 ];
 const elementsGroup = [
     1, 6, 2, 7, 3, 1, 1, 1, 8, 6, 2, 7, 4, 3, 1, 1, 8, 6, 2, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 4, 3, 3, 1, 8, 6, 2, 7, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 4, 4, 3, 3, 8, 6, 2, 7, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 9, 9, 9, 9, 9, 9, 9, 9, 9, 4, 4, 4, 3, 8, 6, 2, 7, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 9, 9, 9, 9, 9, 9, 9, 9, 9, 4, 4, 4, 4, 8, 6
@@ -23,19 +23,19 @@ function ElementCreate(name, symbol, number, mass, group, position) {
     this.name = name;
     this.symbol = symbol;
     this.number = number;
-    this.mass = massToString(mass);
+    this.mass = massString(mass);
     this.group = group;
     this.positionX = position[0];
     this.positionY = position[1];
 }
 
 // Função que formata o número da massa atômica para string
-function massToString(mass) {
+function massString(mass) {
     if(Number.isInteger(mass)) {
         return '[' + String(mass) + ']';
     }
     else {
-        return String(mass.toFixed(3));
+        return String(mass.toFixed(3).replace('.', ','));
     }
 }
 
