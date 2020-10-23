@@ -89,7 +89,7 @@ start.addEventListener("click", () => {
                 elementNameRandom.value = elementsProperties[elementNumberRandom].name;
 
                 skipElement.disabled = false; // habilita o botão pular
-            }, 2000);
+            }, 2001);
         }
     });
 
@@ -101,6 +101,9 @@ start.addEventListener("click", () => {
 
         clearInterval(decreaseSeconds); // para de diminuir o tempo
         clearTimeout(skip); 
+
+        // retira a classe showElement do elemento que está sendo mostrado
+        elementsHTML[elementNumberRandom].classList.remove("showElement");
 
         score.value = 0; // define a pontuação para 0
         time.value = "1:00"; // define o tempo para 1 minuto
@@ -132,6 +135,9 @@ function timeCount() {
         if(seconds == 0) {
             clearInterval(decreaseSeconds); // para de diminuir o tempo
             clearTimeout(skip); 
+
+            // retira a classe showElement do elemento que está sendo mostrado
+            elementsHTML[elementNumberRandom].classList.remove("showElement");
 
             elementNameRandom.value = ""; // esvazia o campo dos elementos gerados
             skipElement.disabled = true; // desabilita o botão pular
